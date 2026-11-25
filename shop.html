@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Shop All Collections | AURÉLIA Maison de Beauté</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'surface-dim': '#edd5ce',
+            'primary-fixed-dim': '#eebba9',
+            'secondary-fixed-dim': '#e4c283',
+            'surface-bright': '#fff8f6',
+            'on-secondary': '#ffffff',
+            'secondary-container': '#ffdb9a',
+            'surface-tint': '#7c5547',
+            'inverse-on-surface': '#ffede8',
+            'surface-container-high': '#fbe3dc',
+            'background': '#fff8f6',
+            'on-error': '#ffffff',
+            'primary': '#7c5547',
+            'surface-container-highest': '#f5ddd7',
+            'secondary-fixed': '#ffdea4',
+            'surface-container': '#ffe9e3',
+            'surface-variant': '#f5ddd7',
+            'surface-container-lowest': '#ffffff',
+            'on-surface': '#251915',
+            'surface': '#fff8f6',
+            'outline': '#83746f',
+            'primary-container': '#d4a392',
+            'on-primary': '#ffffff',
+            'surface-container-low': '#fff1ed',
+            'inverse-surface': '#3b2d29',
+            'on-surface-variant': '#514440',
+            'secondary': '#745b26',
+            'error': '#ba1a1a',
+            'on-background': '#251915'
+          },
+          fontFamily: {
+            'title-md': ['Plus Jakarta Sans', 'sans-serif'],
+            'display-lg': ['Playfair Display', 'serif'],
+            'body-md': ['Plus Jakarta Sans', 'sans-serif'],
+            'headline-lg': ['Playfair Display', 'serif'],
+            'headline-md': ['Playfair Display', 'serif'],
+            'headline-sm': ['Playfair Display', 'serif'],
+            'body-lg': ['Plus Jakarta Sans', 'sans-serif'],
+            'label-md': ['Plus Jakarta Sans', 'sans-serif'],
+            'label-sm': ['Plus Jakarta Sans', 'sans-serif']
+          },
+          spacing: {
+            'space-xs': '0.25rem',
+            'space-sm': '0.5rem',
+            'space-md': '1rem',
+            'space-lg': '1.5rem',
+            'space-xl': '2.5rem',
+            'margin-sm': '1.25rem',
+            'margin': '3rem',
+            'gutter': '1.5rem'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_2px_12px_rgba(37,25,21,0.03)] transition-all duration-300">
+    <div class="w-full px-margin-sm md:px-margin h-20 flex items-center justify-between gap-gutter">
+      <div class="flex items-center gap-space-md">
+        <button id="mobile-menu-btn" class="lg:hidden p-space-xs text-on-surface-variant hover:text-on-surface" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+        <a class="flex items-center gap-space-xs" href="index.html">
+          <img alt="Aurélia Cosmetics Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDBLR4oyvmpLB6l-hppslA1eU3-A46vm7hgWgLfSLOujTLDvnmakAEX-MsPnQHEqHqMZ7nMKnauqvHRqYO8MU7nuNSPvQQtKo-9CSMcapXJubps_P5HzUqTyeE0duTkHwW_R8XEfN_PT8tR7ClkEls6r9pMC25VBPTH3ag3msGwrTv9OMTXbkhBS2dN5y4OsmJPIVNSXkOTHupe2RlfcfqseNcP5j_E01aEX6oF-CLO"/>
+          <span class="font-headline-md text-headline-md tracking-wider text-on-surface uppercase">Aurélia</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="transition-colors bg-surface-container-high text-on-surface font-title-md rounded-full px-space-md py-space-xs" href="shop.html">Shop All</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" href="face-and-base.html">Face &amp; Base</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" href="lips.html">Lips</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" href="eyes.html">Eyes</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" href="shade-matcher.html">Shade Match</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" href="about.html">About</a>
+      </nav>
+
+      <div class="flex items-center gap-space-md">
+        <button aria-label="Search" class="open-search-trigger p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </button>
+        <a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-full transition-colors" href="shade-match-quiz.html">
+          <span class="material-symbols-outlined text-[16px] text-secondary">auto_fix_high</span>
+          <span>Shade Quiz</span>
+        </a>
+        <a aria-label="Wishlist" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" href="wishlist.html">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span class="wishlist-badge absolute -top-1 -right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-full flex items-center justify-center">0</span>
+        </a>
+        <button aria-label="Cart" class="open-cart-trigger relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+          <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+          <span class="cart-badge absolute -top-1 -right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-full flex items-center justify-center">0</span>
+        </button>
+        <a aria-label="Account" class="user-account-avatar p-space-xs flex items-center" href="account.html">
+          <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+            <span class="material-symbols-outlined text-[18px]">person</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-margin-sm py-space-md space-y-space-sm">
+      <a class="block font-title-md py-2 text-secondary font-semibold" href="shop.html">Shop All Collections</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="face-and-base.html">Face &amp; Base</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="lips.html">Lips</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="eyes.html">Eyes</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="shade-matcher.html">Shade Matrix &amp; AR</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="shade-match-quiz.html">60s AI Shade Quiz</a>
+      <a class="block font-title-md py-2 text-on-surface-variant hover:text-on-surface" href="about.html">About The House</a>
+      <a class="block font-title-md py-2 text-on-surface" href="account.html">Firebase Account / VIP Portal</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-28 pb-space-xl px-margin-sm md:px-margin">
+    <!-- Header Banner -->
+    <div class="max-w-4xl mx-auto text-center space-y-space-xs mb-space-xl">
+      <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">The Complete Catalog</span>
+      <h1 class="font-headline-lg text-4xl sm:text-5xl text-on-surface">Curated Maison Collections</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+        Every formula is ethically hand-crafted with organic Damascus rose hydrosol, pure squalane, and light-adaptive mineral pigments.
+      </p>
+    </div>
+
+    <!-- Filters and Search Toolbar -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-2xl shadow-sm mb-space-lg">
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto" id="category-tabs">
+        <button class="filter-btn active-filter px-space-md py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-wider transition-all" onclick="filterCategory('all', this)">All</button>
+        <button class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all" onclick="filterCategory('face', this)">Face &amp; Base</button>
+        <button class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all" onclick="filterCategory('lips', this)">Lips</button>
+        <button class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all" onclick="filterCategory('eyes', this)">Eyes</button>
+      </div>
+
+      <!-- Search & Sort Controls -->
+      <div class="flex items-center gap-space-sm w-full md:w-auto">
+        <div class="relative flex-1 md:w-64">
+          <span class="material-symbols-outlined text-[18px] text-outline absolute left-3 top-1/2 -translate-y-1/2">search</span>
+          <input id="shop-search-input" type="text" placeholder="Search by name or shade..." class="w-full h-10 pl-9 pr-3 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" oninput="applyFilters()"/>
+        </div>
+        <select id="shop-sort-select" class="h-10 px-space-sm rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md outline-none cursor-pointer" onchange="applyFilters()">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter" id="shop-products-grid"></div>
+  </main>
+
+  <!-- Cart Slide-Out Drawer -->
+  <div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="cart-drawer-backdrop" onclick="AureliaApp.closeCartDrawer()"></div>
+  <aside aria-label="Shopping Bag" class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-lowest shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer">
+    <div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-[24px] text-on-surface">shopping_bag</span>
+        <h2 class="font-title-md text-title-md text-on-surface">Your Acquisitions (<span id="cart-total-count">0</span>)</h2>
+      </div>
+      <button aria-label="Close Bag" class="p-space-xs rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface" onclick="AureliaApp.closeCartDrawer()">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <div class="p-space-md bg-surface-container-highest space-y-space-xs">
+      <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface">
+        <span id="shipping-status-text">Free Shipping at $65</span>
+        <span class="font-semibold text-secondary">Complimentary Courier</span>
+      </div>
+      <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+        <div class="h-full bg-secondary rounded-full transition-all duration-500" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="flex-1 p-space-lg overflow-y-auto space-y-space-md" id="cart-items-list"></div>
+    <div class="p-space-lg bg-surface-container-low space-y-space-md">
+      <div class="space-y-space-xs">
+        <div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+          <span>Subtotal</span>
+          <span class="font-title-md text-title-md text-on-surface" id="cart-subtotal">$0.00</span>
+        </div>
+      </div>
+      <button class="w-full h-12 bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-widest rounded-xl transition-all shadow-md flex items-center justify-center gap-space-xs" onclick="AureliaApp.checkout()" type="button">
+        <span>Proceed to Secure Checkout</span>
+        <span class="material-symbols-outlined text-[18px]">lock</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-lowest shadow-[0_-4px_24px_rgba(37,25,21,0.02)] pt-space-xl pb-space-lg">
+    <div class="w-full px-margin-sm md:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter pb-space-xl">
+        <div class="lg:col-span-2 space-y-space-md">
+          <div class="space-y-space-xs">
+            <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Inner Circle Privilege</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Join the Inner Circle</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Receive 15% off your first acquisition, exclusive early access to sensorial launches, and bespoke shade consultations.</p>
+          </div>
+          <form class="flex items-center max-w-md gap-space-xs pt-space-xs" onsubmit="event.preventDefault(); AureliaApp.subscribeNewsletter(document.getElementById('shop-footer-email'))">
+            <input id="shop-footer-email" class="w-full h-12 px-space-md bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md rounded-xl outline-none focus:ring-1 focus:ring-primary-container" placeholder="Enter your email address" type="email" required/>
+            <button class="h-12 px-space-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md tracking-wider uppercase rounded-xl transition-colors whitespace-nowrap" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="space-y-space-md">
+          <h4 class="font-title-md text-title-md text-on-surface">Collections</h4>
+          <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+            <li><a class="hover:text-on-surface transition-colors" href="face-and-base.html">Face &amp; Skin Base</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="lips.html">Lip Lacquers &amp; Balms</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="eyes.html">Eye Velvet Shadows</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="shade-matcher.html">Complexion Matching</a></li>
+          </ul>
+        </div>
+        <div class="space-y-space-md">
+          <h4 class="font-title-md text-title-md text-on-surface">Concierge</h4>
+          <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+            <li><a class="hover:text-on-surface transition-colors" href="about.html#contact">Client Care &amp; Inquiries</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="shade-match-quiz.html">Virtual Skin Consultation</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="about.html#ateliers">Atelier Locations</a></li>
+          </ul>
+        </div>
+        <div class="space-y-space-md">
+          <h4 class="font-title-md text-title-md text-on-surface">The House</h4>
+          <ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+            <li><a class="hover:text-on-surface transition-colors" href="about.html">Our Botanical Heritage</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="account.html">VIP Circle Rewards</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="wishlist.html">Curated Wishlist</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full h-px bg-surface-container-high my-space-lg"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-space-md pt-space-sm text-body-sm text-on-surface-variant">
+        <span>© 2026 AURÉLIA Maison de Beauté. All rights reserved.</span>
+        <span>Connected to Firebase Realtime Cloud</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase Setup -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, doc, setDoc, query, where, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDzzN041KtL1gzc11M3rvv6Dd_M18FiwOM",
+      authDomain: "make-up-43be7.firebaseapp.com",
+      projectId: "make-up-43be7",
+      storageBucket: "make-up-43be7.firebasestorage.app",
+      messagingSenderId: "16618931742",
+      appId: "1:16618931742:web:9ddcc566e7523ef26dd00f",
+      measurementId: "G-VKGSRP66TF"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    let analytics = null;
+    try { analytics = getAnalytics(app); } catch(e) {}
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    window.FirebaseServices = {
+      app, analytics, auth, db,
+      authMethods: { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile },
+      firestoreMethods: { collection, addDoc, getDocs, doc, setDoc, query, where, orderBy, serverTimestamp }
+    };
+
+    window.dispatchEvent(new CustomEvent('firebase-ready', { detail: window.FirebaseServices }));
+  </script>
+
+  <script src="js/shared.js"></script>
+
+  <script>
+    let currentCategory = 'all';
+
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.className = 'filter-btn px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-all';
+      });
+      btn.className = 'filter-btn active-filter px-space-md py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-wider transition-all';
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = (document.getElementById('shop-search-input').value || '').toLowerCase().trim();
+      const sort = document.getElementById('shop-sort-select').value;
+      const grid = document.getElementById('shop-products-grid');
+
+      let products = [...window.AureliaProducts];
+
+      // Filter by category
+      if (currentCategory !== 'all') {
+        products = products.filter(p => p.category === currentCategory);
+      }
+
+      // Filter by search query
+      if (query) {
+        products = products.filter(p => 
+          p.title.toLowerCase().includes(query) || 
+          p.subtitle.toLowerCase().includes(query) ||
+          p.shades.some(s => s.name.toLowerCase().includes(query))
+        );
+      }
+
+      // Sort
+      if (sort === 'price-asc') {
+        products.sort((a, b) => a.price - b.price);
+      } else if (sort === 'price-desc') {
+        products.sort((a, b) => b.price - a.price);
+      } else if (sort === 'rating') {
+        products.sort((a, b) => b.rating - a.rating);
+      }
+
+      if (products.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16 space-y-space-sm">
+            <span class="material-symbols-outlined text-[48px] text-outline-variant">search_off</span>
+            <p class="font-headline-sm text-headline-sm text-on-surface">No formulas match your criteria</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">Try resetting filters or searching with another term.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = products.map(p => `
+        <article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="${p.title}" src="${p.image}">
+            <span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-space-sm py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+              ${p.badge}
+            </span>
+            <button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors ${AureliaApp.isInWishlist(p.id) ? 'text-error' : ''}" onclick="AureliaApp.toggleWishlist('${p.id}', this)" type="button">
+              <span class="material-symbols-outlined text-[18px]" style="${AureliaApp.isInWishlist(p.id) ? 'font-variation-settings: \'FILL\' 1;' : ''}">favorite</span>
+            </button>
+          </div>
+          <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+            <div class="space-y-space-xs">
+              <div class="flex items-center justify-between text-secondary">
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-title-md text-title-md text-on-surface">${p.rating}</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">(${p.reviews})</span>
+                </div>
+                <span class="font-title-md text-title-md text-on-surface">$${p.price.toFixed(2)}</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">${p.title}</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">${p.subtitle}</p>
+            </div>
+            
+            <div class="space-y-space-xs pt-space-xs">
+              <div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+                <span>Shade:</span>
+                <span class="text-on-surface font-semibold" id="shade-name-${p.id}">${p.shades[0].name}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                ${p.shades.map((s, idx) => `
+                  <button class="w-5 h-5 rounded-full shadow-inner focus:outline-none transition-transform hover:scale-110 ${idx === 0 ? 'ring-2 ring-secondary ring-offset-1 scale-110' : ''}" style="background-color: ${s.hex}" onclick="setProductShade('${p.id}', '${s.name}', this)" aria-label="${s.name}"></button>
+                `).join('')}
+              </div>
+            </div>
+
+            <button class="w-full h-11 bg-surface-container-high hover:bg-inverse-surface hover:text-inverse-on-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-space-xs mt-space-sm" onclick="quickAddProduct('${p.id}')" type="button">
+              <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+              <span>Quick Add to Bag</span>
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function setProductShade(productId, shadeName, btn) {
+      const label = document.getElementById(`shade-name-${productId}`);
+      if (label) label.innerText = shadeName;
+      btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('ring-2', 'ring-secondary', 'ring-offset-1', 'scale-110'));
+      btn.classList.add('ring-2', 'ring-secondary', 'ring-offset-1', 'scale-110');
+    }
+
+    function quickAddProduct(productId) {
+      const label = document.getElementById(`shade-name-${productId}`);
+      const shade = label ? label.innerText : undefined;
+      AureliaApp.addToCart(productId, shade);
+    }
+
+    // Check URL query on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const searchParam = params.get('search');
+      if (searchParam) {
+        document.getElementById('shop-search-input').value = searchParam;
+      }
+      applyFilters();
+    });
+  </script>
+</body>
+</html>

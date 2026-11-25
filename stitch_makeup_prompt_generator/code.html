@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-dim': '#edd5ce', 'primary-fixed-dim': '#eebba9', 'secondary-fixed-dim': '#e4c283', 'surface-bright': '#fff8f6', 'on-secondary': '#ffffff', 'secondary-container': '#ffdb9a', 'surface-tint': '#7c5547', 'inverse-on-surface': '#ffede8', 'surface-container-high': '#fbe3dc', 'background': '#fff8f6', 'on-error': '#ffffff', 'on-tertiary-fixed-variant': '#5a4138', 'on-tertiary': '#ffffff', 'on-tertiary-container': '#543c33', 'tertiary-fixed-dim': '#e2bfb2', 'on-secondary-fixed-variant': '#5a4310', 'outline-variant': '#d5c3bd', 'primary': '#7c5547', 'surface-container-highest': '#f5ddd7', 'secondary-fixed': '#ffdea4', 'on-primary-fixed': '#2f1409', 'tertiary-container': '#c8a79b', 'on-tertiary-fixed': '#2a170f', 'surface-container': '#ffe9e3', 'surface-variant': '#f5ddd7', 'on-primary-container': '#5c392c', 'surface-container-lowest': '#ffffff', 'primary-fixed': '#ffdbcf', 'on-secondary-fixed': '#261900', 'inverse-primary': '#eebba9', 'on-secondary-container': '#795f2a', 'on-surface': '#251915', 'surface': '#fff8f6', 'on-primary-fixed-variant': '#623e31', 'outline': '#83746f', 'primary-container': '#d4a392', 'on-primary': '#ffffff', 'surface-container-low': '#fff1ed', 'tertiary-fixed': '#ffdbce', 'inverse-surface': '#3b2d29', 'on-surface-variant': '#514440', 'error-container': '#ffdad6', 'secondary': '#745b26', 'on-error-container': '#93000a', 'tertiary': '#73584e', 'error': '#ba1a1a', 'on-background': '#251915' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-md': '1rem', 'gutter-sm': '1rem', 'margin-sm': '1.25rem', 'margin': '3rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'gutter': '1.5rem', 'space-lg': '1.5rem', 'space-xl': '2.5rem' }, fontFamily: { 'title-md': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Playfair Display'], 'body-md': ['Plus Jakarta Sans'], 'headline-lg': ['Playfair Display'], 'headline-md': ['Playfair Display'], 'body-sm': ['Plus Jakarta Sans'], 'display-lg': ['Playfair Display'], 'label-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Playfair Display'], 'headline-sm': ['Playfair Display'], 'body-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'] }, fontSize: { 'title-md': ['18px', { lineHeight: '26px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.01em', fontWeight: '400' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'headline-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.015em', fontWeight: '400' }], 'headline-md': ['28px', { lineHeight: '36px', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'display-lg': ['56px', { lineHeight: '64px', letterSpacing: '-0.02em', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.06em', fontWeight: '500' }], 'headline-lg-mobile': ['28px', { lineHeight: '36px', letterSpacing: '0em', fontWeight: '400' }], 'headline-sm': ['22px', { lineHeight: '30px', fontWeight: '500' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.08em', fontWeight: '600' }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-md shadow-[0_2px_12px_rgba(37,25,21,0.03)] transition-all duration-300"><div class="w-full px-margin-sm md:px-margin h-20 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Aurélia Cosmetics Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDBLR4oyvmpLB6l-hppslA1eU3-A46vm7hgWgLfSLOujTLDvnmakAEX-MsPnQHEqHqMZ7nMKnauqvHRqYO8MU7nuNSPvQQtKo-9CSMcapXJubps_P5HzUqTyeE0duTkHwW_R8XEfN_PT8tR7ClkEls6r9pMC25VBPTH3ag3msGwrTv9OMTXbkhBS2dN5y4OsmJPIVNSXkOTHupe2RlfcfqseNcP5j_E01aEX6oF-CLO"/><a class="font-headline-md text-headline-md tracking-wider text-on-surface uppercase" data-path="shop-all" href="#">Aurélia</a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="bg-surface-container-high text-on-surface font-title-md rounded-full px-space-md py-space-xs"><a aria-current="page" class="transition-colors bg-surface-container-high text-on-surface font-title-md rounded-full px-space-md py-space-xs" data-path="shop-all" href="#">Shop All</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="face-and-base" href="#">Face &amp; Base</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="lips" href="#">Lips</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="eyes" href="#">Eyes</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="shade-matcher" href="#">Shade Match</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><button aria-label="Search" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-full transition-colors" data-path="shade-match-quiz" href="#"><span class="material-symbols-outlined text-[16px] text-secondary">auto_fix_high</span><span>Shade Quiz</span></a><a aria-label="Wishlist" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute -top-1 -right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-full flex items-center justify-center">2</span></a><button aria-label="Cart" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 h-4 w-4 bg-primary text-on-primary font-label-sm text-label-sm rounded-full flex items-center justify-center">3</span></button><a class="p-space-xs flex items-center" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtwn7kkNP9Q_X91IAnqk6vIcff-AyqzGUPHsQFFky0ljSUT4WBQK6xR3wo8sGTdCIWCOMkZj6K9Vopz5myheqH0PWN_4e0ch0dsvXJlAnhB6O0N7VnBFhNDw7KQfQ-7Br6pA7N8tDhFBzrUh72f-x_RLyyKoO6qOdNXKML-houjP89M6_of-tyl38QRDNwUdovA8AvIXnCBU0sTolShKZgBLZCs7P87jrsvtnMmY"/></a></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full relative">
+<!-- Top Marquee Ticker -->
+<aside aria-label="Brand Announcement" class="w-full bg-surface-container-low py-space-xs px-margin-sm md:px-margin flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase overflow-hidden">
+<div class="flex items-center gap-space-lg mx-auto whitespace-nowrap animate-pulse">
+<span class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Complimentary Archival Travel Dropper with Orders over $65</span>
+<span class="hidden md:inline text-outline-variant font-serif">•</span>
+<span class="hidden md:flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Carbon-Neutral Bespoke Delivery Worldwide</span>
+<span class="hidden lg:inline text-outline-variant font-serif">•</span>
+<span class="hidden lg:flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 Skin-True Tones Formulated by Master Chemists</span>
+</div>
+</aside>
+<!-- Section 1: Hero Showcase (Editorial Wide Split with Overlapping Micro-Placements) -->
+<section class="relative w-full px-margin-sm md:px-margin pt-space-lg pb-space-xl overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Column: Typographic Narrative -->
+<div class="lg:col-span-6 z-10 space-y-space-lg lg:pr-space-md">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-md py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">The Dew Spectrum Collection</span>
+</div>
+<div class="space-y-space-sm">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+            Elevate Your <span class="italic font-normal text-secondary">Natural Glow</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Clean, breathable formulas infused with skin-loving botanical squalane and wild damask rose. Designed to melt imperceptibly into skin for an ethereal second-skin veil.
+          </p>
+</div>
+<!-- Call to Actions -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="h-12 px-space-xl bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-widest rounded-full shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-space-xs group" href="#best-sellers">
+<span>Shop Collection</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="h-12 px-space-lg text-on-surface hover:text-secondary font-title-md text-title-md flex items-center gap-space-xs group underline underline-offset-8 decoration-outline-variant hover:decoration-secondary transition-all" href="#shade-finder">
+<span>Find Your Shade</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">north_east</span>
+</a>
+</div>
+<!-- Badges & Verification Micro-List -->
+<div class="pt-space-md grid grid-cols-2 sm:grid-cols-3 gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">eco</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface">100% Vegan</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Leaping Bunny certified</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">water_drop</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface">48 Inclusive Tones</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Pure mineral radiance</p>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">health_and_safety</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface">Derm Proven</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Non-comedogenic</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Bespoke Visual Composition -->
+<div class="lg:col-span-6 relative mt-space-md lg:mt-0">
+<!-- Ambient Diffuse Glow -->
+<div class="absolute -top-12 -right-12 w-80 h-80 bg-secondary-container/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute -bottom-10 left-10 w-72 h-72 bg-primary-container/30 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Editorial close up high fashion beauty portrait of a radiant glowing model with dewy warm honey golden skin holding an aesthetic frosted glass cosmetic bottle of Aurélia Lumière silk skin tint and sleek lip peptide glaze, natural warm soft studio lighting, ultra fine skin texture, muted blush and warm cream tones, photorealistic 8k commercial makeup campaign." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDSducVEVzynolsYqnF6g-5J963vl7nOGKK909uuyYks1mydCpDH_-A2O_SPPZalEWis6Zo3xeZthmpsaNAutMNwmKB24q7TeEteheLFZ0FnhzNCldG5F5iEbPrRtF7j6M48_hyDtiH9ZXPYP08-Bzrzcf9ZblriaP_YGLfWath-S7lNepJp-NCe0Rn4LyYi5rolb3Eh0REEKKKojrew0gGeeoQ0BdQkV4RmzPps"/>
+<!-- Floating Highlight Glass Pill: Live Dew Index -->
+<div class="absolute top-6 left-6 backdrop-blur-md bg-surface/90 px-space-md py-space-xs rounded-full shadow-lg flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Dew Index: 94% Reflection</span>
+</div>
+<!-- Floating Secondary Product Accent Card -->
+<div class="absolute bottom-6 right-6 backdrop-blur-md bg-surface/95 p-space-md rounded-xl shadow-xl max-w-[260px] space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Award Winner</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2024 Prix</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface line-clamp-1">Lumière Silk Skin Tint</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Infused with 12 cold-pressed botanicals.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">$38.00</span>
+<button class="px-space-md py-1 bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded-full transition-colors" onclick="openCartWithItem('Lumière Silk Skin Tint SPF 30', '04 Dune (Medium Warm)', '38.00', 'placeholder')">
+                Acquire
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Interactive Shade Finder & Skin Tone Filter Bar -->
+<section class="w-full px-margin-sm md:px-margin py-space-xl bg-surface-container-low" id="shade-finder">
+<div class="max-w-4xl mx-auto text-center space-y-space-xs mb-space-lg">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Bespoke Complexion Matrix</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Discover Your Second Skin</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto">
+        Filtered by skin tone depth and undertone balance for seamless matching. Formulated with adaptive mineral pigments that synchronize with your natural flush.
+      </p>
+</div>
+<!-- Filter Control Module -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-md max-w-5xl mx-auto space-y-space-lg">
+<!-- Tone Depth Selector -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface">1. Select Skin Tone Depth</label>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="selected-tone-label">Current: Medium</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm" id="tone-depth-group">
+<!-- Fair -->
+<button class="tone-btn flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setToneDepth('Fair', this)" type="button">
+<span class="w-7 h-7 rounded-full bg-[#F7E2D5] shadow-inner flex-shrink-0"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Fair</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tones 01-10</p>
+</div>
+</button>
+<!-- Light -->
+<button class="tone-btn flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setToneDepth('Light', this)" type="button">
+<span class="w-7 h-7 rounded-full bg-[#ECCEBD] shadow-inner flex-shrink-0"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Light</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tones 11-20</p>
+</div>
+</button>
+<!-- Medium (Active default) -->
+<button class="tone-btn active-tone flex items-center gap-space-sm p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface transition-all text-left shadow-sm" onclick="setToneDepth('Medium', this)" type="button">
+<span class="w-7 h-7 rounded-full bg-[#CFA182] shadow-inner flex-shrink-0"></span>
+<div>
+<p class="font-title-md text-title-md text-inverse-on-surface">Medium</p>
+<p class="font-body-sm text-body-sm text-surface-container-high">Tones 21-30</p>
+</div>
+</button>
+<!-- Tan -->
+<button class="tone-btn flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setToneDepth('Tan', this)" type="button">
+<span class="w-7 h-7 rounded-full bg-[#A26D4D] shadow-inner flex-shrink-0"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Tan</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tones 31-40</p>
+</div>
+</button>
+<!-- Deep -->
+<button class="tone-btn flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setToneDepth('Deep', this)" type="button">
+<span class="w-7 h-7 rounded-full bg-[#593729] shadow-inner flex-shrink-0"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Deep</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tones 41-48</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Undertone Selector -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface">2. Select Undertone Bias</label>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="selected-undertone-label">Current: Warm (Golden / Olive)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="undertone-group">
+<!-- Warm (Active) -->
+<button class="undertone-btn active-undertone flex items-center justify-between p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface transition-all text-left" onclick="setUndertone('Warm (Golden / Olive)', this)" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-[#D4AF37]"></span>
+<div>
+<p class="font-title-md text-title-md text-inverse-on-surface">Warm</p>
+<p class="font-body-sm text-body-sm text-surface-container-high">Golden, olive, honey warmth</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+</button>
+<!-- Neutral -->
+<button class="undertone-btn flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setUndertone('Neutral (Peach / Beige)', this)" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-[#E5B59E]"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Neutral</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Peach balance, minimal cast</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline-variant opacity-0">check_circle</span>
+</button>
+<!-- Cool -->
+<button class="undertone-btn flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left" onclick="setUndertone('Cool (Rosy / Blue)', this)" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-[#E29D96]"></span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Cool</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rosy, delicate pink luminescence</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline-variant opacity-0">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Realtime Matching Output Bar & Quiz CTA -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">palette</span>
+</div>
+<div>
+<p class="font-label-md text-label-md uppercase tracking-wider text-secondary" id="match-heading">Selected Profile</p>
+<p class="font-title-md text-title-md text-on-surface" id="match-summary">Medium • Warm (Showing 6 Matching Shades)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="w-full md:w-auto h-11 px-space-lg bg-primary hover:bg-on-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-xl transition-colors whitespace-nowrap" onclick="filterCatalogByShade()" type="button">
+            View Matches
+          </button>
+<a class="w-full md:w-auto h-11 px-space-lg bg-surface-container-highest hover:bg-surface-dim text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-colors whitespace-nowrap flex items-center justify-center gap-space-xs" data-path="shade-match-quiz" href="#">
+<span>60s AI Quiz</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">auto_fix_high</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Best Sellers Product Grid (4-Column Layout) -->
+<section class="w-full px-margin-sm md:px-margin py-space-xl" id="best-sellers">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="space-y-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Atelier Curations</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Iconic Best Sellers</h2>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs" role="tablist">
+<button class="px-space-md py-space-xs rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-wider shadow-sm">All</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors">Dewy Complexion</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors">Plumping Lips</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider transition-colors">Cheek &amp; Sculpt</button>
+</div>
+</div>
+<!-- Product Grid: 4 Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Lumière Silk Skin Tint SPF 30 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist aesthetic luxury cosmetic photography of Aurélia Lumière silk skin tint foundation glass bottle with frosted pump resting on warm travertine stone, soft directional sunlight, clean cream tone studio backdrop, high end editorial skincare product photography." id="card1-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe8wLgpZEAeKtrhCt9tfEYVaJZPLx4aZmJpXGOaJiklYEMbunFFBYUJPTdGvgkB_rK-6mf9EHQ6qiHWsUnqng3ME9oBr5_oMK1uyAQovcAQ7yo501WTsFt4ly502dPGDZJy1IJbbJxZvF_ld5AS7iQV8OBiLE-O2jN6uRczEVARAo4pyJ3CfsvFk49OXzRJhKeOjkmlM7MB94-XgO_rQLOu0Ne7UJoTltM81FZWEQ"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-space-sm py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+            Bestseller
+          </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(1,842)</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">$38</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Lumière Silk Skin Tint SPF 30</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dewy, breathable medium coverage with zinc mineral shield.</p>
+</div>
+<!-- Shade Swatches Selector -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Shade:</span>
+<span class="text-on-surface font-semibold" id="card1-shade-name">04 Dune (Warm)</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Shade 01" class="w-5 h-5 rounded-full bg-[#F7E6DC] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(1, '01 Alabaster', '#F7E6DC', this)"></button>
+<button aria-label="Shade 02" class="w-5 h-5 rounded-full bg-[#ECCEB8] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(1, '02 Bisque', '#ECCEB8', this)"></button>
+<button aria-label="Shade 03" class="w-5 h-5 rounded-full bg-[#DEBA9D] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(1, '03 Warm Ochre', '#DEBA9D', this)"></button>
+<button aria-label="Shade 04" class="w-5 h-5 rounded-full bg-[#C8997A] shadow-inner ring-2 ring-secondary ring-offset-1 focus:outline-none transition-transform scale-110" onclick="setCardShade(1, '04 Dune (Warm)', '#C8997A', this)"></button>
+<button aria-label="Shade 05" class="w-5 h-5 rounded-full bg-[#9F6848] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(1, '05 Amber Bronze', '#9F6848', this)"></button>
+<button aria-label="Shade 06" class="w-5 h-5 rounded-full bg-[#543628] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(1, '06 Rich Cacao', '#543628', this)"></button>
+</div>
+</div>
+<!-- Quick Add Action -->
+<button class="w-full h-11 bg-surface-container-high hover:bg-inverse-surface hover:text-inverse-on-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-space-xs mt-space-sm group/btn" onclick="openCartWithItem('Lumière Silk Skin Tint SPF 30', document.getElementById('card1-shade-name').innerText, '38.00', 'placeholder')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Peptide Glaze Hydrating Lip Butter -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Studio beauty still life photography of Aurélia Peptide Glaze Lip Butter tube squeezed slightly showing glossy rich caramel nude formulation, dripping honey luster texture, soft beige studio lighting, luxury clean cosmetic packaging." id="card2-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbk15yvCRcon_u4PZD_AUxrtfo2avJnsbOHG9WCBjQ9jVlir2Iy9cm9G1YOcDTDfvEhHiWkxET7TCMTRxDYYhN7CvjwaQ2L5-e-CmcEDNXmVjewtJA9WTO8OcmHa_TWNdmoVyg9LpCUoim_OVYFp5QjsS3O5DyeSHJKBxLr4uw4gWBtQW436rnVllec5el9MzlVIbvLvz8RV-cR0agAiOxdyK3vreQ9S-w_ijuBzY"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-space-sm py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-primary">
+            Selling Fast
+          </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(2,410)</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">$22</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Peptide Glaze Lip Butter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ultra-glossy barrier repair packed with tri-peptides and murumuru butter.</p>
+</div>
+<!-- Shade Swatches Selector -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Flavor Shade:</span>
+<span class="text-on-surface font-semibold" id="card2-shade-name">Salted Caramel</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Salted Caramel" class="w-5 h-5 rounded-full bg-[#C68B59] shadow-inner ring-2 ring-secondary ring-offset-1 focus:outline-none transition-transform scale-110" onclick="setCardShade(2, 'Salted Caramel', '#C68B59', this)"></button>
+<button aria-label="Rose Quartz" class="w-5 h-5 rounded-full bg-[#E89EA3] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(2, 'Rose Quartz', '#E89EA3', this)"></button>
+<button aria-label="Espresso" class="w-5 h-5 rounded-full bg-[#58362A] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(2, 'Espresso Crème', '#58362A', this)"></button>
+<button aria-label="Vanilla Glaze" class="w-5 h-5 rounded-full bg-[#FCEFE4] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(2, 'Vanilla Glaze', '#FCEFE4', this)"></button>
+</div>
+</div>
+<!-- Quick Add Action -->
+<button class="w-full h-11 bg-surface-container-high hover:bg-inverse-surface hover:text-inverse-on-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-space-xs mt-space-sm group/btn" onclick="openCartWithItem('Peptide Glaze Hydrating Lip Butter', document.getElementById('card2-shade-name').innerText, '22.00', 'placeholder')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Velvet Cloud Melt-in Liquid Blush -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial product shot of Aurélia velvet cloud melt-in liquid blush with soft doe foot applicator smudged against silk fabric showing warm terracotta rose pigment, ultra soft matte glow luxury cosmetic aesthetic, warm soft focus lighting." id="card3-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3OzDFFLlncxtKwTpOp_XjTLXs6zAxOSD5qrfDLWyCDrMAL4Cfl2f5lhKdJCuasVKd0SfLReUE7aQi0uFMwzftJg7UkTes32F6_bdw9Bnk5_gmic-YkJRkCtoM814EVL1SEcxywb1cIM_Cj-kVL6oc2jkPRXLBm-y4sEbHlOCUbW1Tubx8Y717osmfguhlL3o0aFelNAGQ1TA5bcK5n9O10M-WQhNXGzY-rpB4z4Q"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-space-sm py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+            Viral Hit
+          </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface">5.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(950)</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">$26</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Velvet Cloud Liquid Blush</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Weightless watercolor flush enriched with soothing snow mushroom extract.</p>
+</div>
+<!-- Shade Swatches Selector -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Shade:</span>
+<span class="text-on-surface font-semibold" id="card3-shade-name">Sunkissed Terracotta</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Peony Dream" class="w-5 h-5 rounded-full bg-[#F29F9D] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(3, 'Peony Dream', '#F29F9D', this)"></button>
+<button aria-label="Sunkissed Terracotta" class="w-5 h-5 rounded-full bg-[#C56C51] shadow-inner ring-2 ring-secondary ring-offset-1 focus:outline-none transition-transform scale-110" onclick="setCardShade(3, 'Sunkissed Terracotta', '#C56C51', this)"></button>
+<button aria-label="Berry Aura" class="w-5 h-5 rounded-full bg-[#943E4B] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(3, 'Berry Aura', '#943E4B', this)"></button>
+<button aria-label="Nude Bloom" class="w-5 h-5 rounded-full bg-[#CFA390] shadow-inner focus:outline-none transition-transform hover:scale-110" onclick="setCardShade(3, 'Nude Bloom', '#CFA390', this)"></button>
+</div>
+</div>
+<!-- Quick Add Action -->
+<button class="w-full h-11 bg-surface-container-high hover:bg-inverse-surface hover:text-inverse-on-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-space-xs mt-space-sm group/btn" onclick="openCartWithItem('Velvet Cloud Melt-in Liquid Blush', document.getElementById('card3-shade-name').innerText, '26.00', 'placeholder')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Luminous Glow Infusion Serum -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Luxury glass dropper serum bottle Aurélia Luminous Glow Infusion with golden opalescent dewy serum drop hanging on glass pipette, soft rippling warm water reflections in background, luxury clean French beauty aesthetic, warm cream and gold tones." id="card4-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHvbEphryavGS3_0TUdfDmh35sWO03O1KsLSwmhRldDLhklLPGeuYskJsdRENT-y7QLokAqKqDmmmvZr3noqDgT7fsGlYs_vkeSB07O2hvqBOm3eFQWrfzQFS4XrjkPQCsx11-B1LjrAbUAs3zxec0r_qc7LNMmzWxM4TAyrgTyPgsVHbF3eiwHz6HM4YdeLrPKvOgY9x3ZfXlkhvCJLWisvU-Yv7KfUVs3FewXh8"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-space-sm py-0.5 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+            Multi-Award
+          </span>
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(3,120)</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">$44</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Luminous Glow Infusion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Triple-weight Hyaluronic acid &amp; plant squalane radiance primer elixir.</p>
+</div>
+<!-- Format / Size Specs -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Finish:</span>
+<span class="text-on-surface font-semibold">Dewy Lit-From-Within</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">30 ml / 1.0 fl oz</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed/50 font-label-sm text-label-sm text-on-secondary-fixed">Refillable Bottle</span>
+</div>
+</div>
+<!-- Quick Add Action -->
+<button class="w-full h-11 bg-surface-container-high hover:bg-inverse-surface hover:text-inverse-on-surface text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-space-xs mt-space-sm group/btn" onclick="openCartWithItem('Luminous Glow Infusion Serum', 'Universal Dew Finish (30ml)', '44.00', 'placeholder')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Quick Add to Bag</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 4: Virtual Shade Try-On & AR Experience Banner -->
+<section class="w-full px-margin-sm md:px-margin py-space-xl">
+<div class="relative w-full rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low p-space-lg md:p-space-xl overflow-hidden shadow-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Interactive Split Before/After Slider Demonstration -->
+<div class="lg:col-span-7">
+<div class="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-xl overflow-hidden shadow-xl select-none bg-surface-container-lowest" id="ar-slider-container">
+<!-- Background Image: AURÉLIA Glow Finish -->
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Editorial portrait of a woman wearing luminous flawless dewy AURÉLIA makeup foundation with radiant natural sheen, perfectly blended soft warm lighting, ultra crisp skin pore texture, high luxury fashion magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2IPiSahC6Zt_YYcYn3LKkOJGpim4L-ysG3Bc2Q00XEJR9bE1tBQMGtYjyRTi3fk5YtZYMjoTOJE21byCzHFFuzt30UCE9afaflIyX4JufSF4L3NYjuW_UwqbqjT3DvCQrmg7_vZ_tGRKqB_so9HcqVJ3XMu5OdsIwzOn84NTvGadw91fP9xZxJ5qpen8rhVyDxnWTSwQkQFm7rNwEv5Xn9Ubt_ak13aLTGH-woo"/>
+<div class="absolute bottom-4 right-4 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-space-md py-1 rounded-full uppercase tracking-wider z-10">
+              AURÉLIA Glow Finish
+            </div>
+<!-- Foreground Clip: Bare Skin (Interactive Slider) -->
+<div class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-secondary-fixed shadow-[0_0_15px_rgba(212,175,55,0.4)]" id="ar-clip-layer">
+<img class="absolute inset-0 w-full h-full object-cover max-w-none" data-alt="Editorial close up portrait of the same woman bare faced with raw natural skin, subtle redness and slight skin texture before makeup application, studio lighting, authentic bare skin comparison." id="ar-bare-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBT7DEoo4J-MqWCUG8s04_v7wc2gSrrQ9KTSCkg3T6Sa7c7Wjr0S_KBM37ZIjZPRgoejKaOfjZFtKOQMlUnCh2o9zveLeRTYC7fgd7jwKZy9jhBepakKMQWMGytDk27noEMFEZs-xzUMQ4lI-feRmASOHJgP4QFIlcNMQBRcmxbojvKqsHiJNgMd4UnYVN1UrqwPSzAUE45OYdgWWC4DOJuWbOudYtryE9i_4a2L0" style="width: 100%; min-width: 100%;"/>
+<div class="absolute bottom-4 left-4 bg-surface/85 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-space-md py-1 rounded-full uppercase tracking-wider">
+                Bare Skin
+              </div>
+</div>
+<!-- Draggable Center Handle -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface shadow-xl flex items-center justify-center cursor-ew-resize z-20 pointer-events-none" id="ar-handle">
+<span class="material-symbols-outlined text-[20px] text-on-surface">drag_indicator</span>
+</div>
+<!-- AR Calibration Mesh Nodes Overlay Simulation -->
+<div class="absolute top-4 left-4 flex items-center gap-space-xs bg-surface-container-highest/90 backdrop-blur-sm px-space-sm py-1 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>128-Point Neural Skin Analysis Active</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center mt-space-xs italic">
+            Slide horizontally to experience the real-time mineral skin transformation.
+          </p>
+</div>
+<!-- Right: AR Experience Value Proposition -->
+<div class="lg:col-span-5 space-y-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Virtual Concierge</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight">
+              Live Virtual Shade Try-On
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              Zero guesswork. Our calibrated web camera AR engine isolates natural melanin nuances to reveal your exact tone across 48 luminous shade profiles.
+            </p>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">verified</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Sub-Surface Melanin Detection</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detects subtle olive, peach, and golden undertones under variable room lighting.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">verified</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">98% Color Match Accuracy</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Backed by independent testing on over 1,200 unique multi-ethnic complexions.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">verified</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Instant Day &amp; Evening Luminescence</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Toggle ambient natural daylight versus candlelit evening shimmer.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="h-12 px-space-xl bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-widest rounded-full shadow-md transition-all flex items-center gap-space-xs" onclick="triggerArTryOnModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Launch Camera Try-On</span>
+</button>
+<button class="h-12 px-space-lg bg-surface hover:bg-surface-bright text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-full transition-colors flex items-center gap-space-xs shadow-sm" onclick="triggerArTryOnModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span>Upload Photo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Editorial Brand Values & Social Proof Ribbon -->
+<section class="w-full px-margin-sm md:px-margin py-space-xl bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto space-y-space-xl">
+<!-- Values 4-Column Metric Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-space-xs p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[32px]">science</span>
+<p class="font-title-md text-title-md text-on-surface">Dermatologist Tested</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sensitive skin certified &amp; non-comedogenic</p>
+</div>
+<div class="space-y-space-xs p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[32px]">cruelty_free</span>
+<p class="font-title-md text-title-md text-on-surface">PETA &amp; Leaping Bunny</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">100% cruelty-free &amp; entirely vegan</p>
+</div>
+<div class="space-y-space-xs p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[32px]">recycling</span>
+<p class="font-title-md text-title-md text-on-surface">Recyclable Glass</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sustainable refill cartridges for every product</p>
+</div>
+<div class="space-y-space-xs p-space-md rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[32px]">spa</span>
+<p class="font-title-md text-title-md text-on-surface">Clean Botanical Actives</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formulated without parabens, talc, or synthetic silicones</p>
+</div>
+</div>
+<!-- Curated Vogue Press Pull-Quote -->
+<div class="relative p-space-lg md:p-space-xl rounded-xl bg-surface-container text-center space-y-space-md overflow-hidden">
+<span class="font-display-lg text-[72px] text-primary/20 absolute -top-4 left-1/2 -translate-x-1/2 font-serif select-none pointer-events-none">“</span>
+<blockquote class="relative z-10 max-w-3xl mx-auto font-headline-md text-headline-sm md:text-headline-md text-on-surface leading-snug">
+          “The skin tint that replaced all five steps of my morning routine. AURÉLIA creates that elusive Parisian dewy lit-from-within glow without masking the natural vitality beneath.”
+        </blockquote>
+<div class="relative z-10 space-y-0.5">
+<p class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Vogue Beauty Editorial</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Spring Beauty Awards • Best Complexion Breakthrough</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-Out Shopping Bag Drawer (Modal Structure) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+<aside aria-label="Shopping Bag" class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-lowest shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer">
+<!-- Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[24px] text-on-surface">shopping_bag</span>
+<h2 class="font-title-md text-title-md text-on-surface">Your Acquisitions (<span id="cart-total-count">2</span>)</h2>
+</div>
+<button aria-label="Close Bag" class="p-space-xs rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface" onclick="closeCartDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Free Shipping Progress Bar -->
+<div class="p-space-md bg-surface-container-highest space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface">
+<span id="shipping-status-text">You are $4.00 away from Complimentary Shipping!</span>
+<span class="font-semibold text-secondary">Free at $65</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" id="shipping-progress-fill" style="width: 93%;"></div>
+</div>
+</div>
+<!-- Bag Items Scroll Area -->
+<div class="flex-1 p-space-lg overflow-y-auto space-y-space-md" id="cart-items-list">
+<!-- Item 1 -->
+<div class="flex gap-space-md pb-space-md border-b-0 bg-surface-container-low p-space-sm rounded-xl" id="cart-item-1">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Aurélia Lumière silk skin tint bottle thumbnail shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSuICEuwQgbyj6FU_dBO7B1gJtPbQV1DOJT4CnyWTMz7s-FGVgieBOohZyMeGbOUyRJ3A8DlvdQ0nxsHLUZVd_Zp2CAEEqq_6bme2r6tfDj6NDuipPfx7GPKAL27vOOt6nsN3hRu0-CvSfd3roTIobWpH6W6ihZ4zfjMai4IbY38E_AkQD7V_SSsWBuUZXehQfvgSRxDVeD_PsnhGhpwJM5g7mL4pC9EgAAEt3LJQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="truncate">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Lumière Silk Skin Tint SPF 30</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shade 04 Dune (Warm)</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="removeCartItem('cart-item-1', 38.00)">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">$38.00</span>
+<div class="flex items-center gap-space-xs bg-surface px-2 py-0.5 rounded-full">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty 1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-space-md pb-space-md border-b-0 bg-surface-container-low p-space-sm rounded-xl" id="cart-item-2">
+<div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Aurélia Peptide Glaze Lip Butter tube thumbnail shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5hG4wTOhzF-q0m4vaDuvShGkACvlc5O2xdJYV2_LhovCbFVj3BEp4VwrOYBj1jnUjdt0qUPwlWpEBhJm3ffex4qQbhRAgncEYU7DbWoVAJCPCUNfEGnVZ0TKgBLKbdBfb_AaP0BVO6hGcSsT9xjt5K_2yG2lAnCP4eqBC_tY0rwZmnrdfe8vLxJ35ha_HWA1-hdT5PSc5-m9e9yhIqm2uV-2cgVeax07gCA_8dUE"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="truncate">
+<h4 class="font-title-md text-title-md text-on-surface truncate">Peptide Glaze Lip Butter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Salted Caramel</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="removeCartItem('cart-item-2', 22.00)">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">$22.00</span>
+<div class="flex items-center gap-space-xs bg-surface px-2 py-0.5 rounded-full">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty 1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Checkout Actions -->
+<div class="p-space-lg bg-surface-container-low space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Subtotal</span>
+<span class="font-title-md text-title-md text-on-surface" id="cart-subtotal">$60.00</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Estimated Taxes &amp; Carbon Offset</span>
+<span>Calculated at Step 2</span>
+</div>
+</div>
+<button class="w-full h-12 bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-widest rounded-xl transition-all shadow-md flex items-center justify-center gap-space-xs" type="button">
+<span>Proceed to Secure Checkout</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Free 30-Day Pure Skin Match Guarantee</span>
+</p>
+</div>
+</aside>
+<!-- Interactive Scripts for Shade Selection, Drag Slider, and Cart Drawer -->
+<script>
+    // State management
+    let cartSubtotalValue = 60.00;
+    let cartItemCount = 2;
+
+    // Cart Drawer Controls
+    function openCartDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.remove('pointer-events-none', 'opacity-0');
+        backdrop.classList.add('opacity-100');
+        drawer.classList.remove('translate-x-full');
+      }
+    }
+
+    function closeCartDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function openCartWithItem(productName, shadeName, price, imgThumb) {
+      cartItemCount++;
+      cartSubtotalValue += parseFloat(price);
+
+      // Create new cart element
+      const cartList = document.getElementById('cart-items-list');
+      const newItemId = 'cart-item-' + Date.now();
+      const itemEl = document.createElement('div');
+      itemEl.className = 'flex gap-space-md pb-space-md border-b-0 bg-surface-container-low p-space-sm rounded-xl transition-all';
+      itemEl.id = newItemId;
+      itemEl.innerHTML = `
+        <div class="w-20 h-20 bg-surface-container rounded-lg overflow-hidden flex-shrink-0">
+          <img src="${imgThumb}" data-alt="${productName} added to cart preview" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 flex flex-col justify-between min-w-0">
+          <div class="flex items-start justify-between gap-space-xs">
+            <div class="truncate">
+              <h4 class="font-title-md text-title-md text-on-surface truncate">${productName}</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">${shadeName}</p>
+            </div>
+            <button onclick="removeCartItem('${newItemId}', ${price})" class="text-on-surface-variant hover:text-error transition-colors p-1" aria-label="Remove item">
+              <span class="material-symbols-outlined text-[16px]">delete</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-title-md text-title-md text-on-surface">$${price}</span>
+            <div class="flex items-center gap-space-xs bg-surface px-2 py-0.5 rounded-full">
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Qty 1</span>
+            </div>
+          </div>
+        </div>
+      `;
+      cartList.prepend(itemEl);
+
+      updateCartSummary();
+      openCartDrawer();
+    }
+
+    function removeCartItem(elementId, price) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.remove();
+        cartItemCount = Math.max(0, cartItemCount - 1);
+        cartSubtotalValue = Math.max(0, cartSubtotalValue - price);
+        updateCartSummary();
+      }
+    }
+
+    function updateCartSummary() {
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const countEl = document.getElementById('cart-total-count');
+      const shippingStatus = document.getElementById('shipping-status-text');
+      const progressFill = document.getElementById('shipping-progress-fill');
+
+      if (subtotalEl) subtotalEl.innerText = '$' + cartSubtotalValue.toFixed(2);
+      if (countEl) countEl.innerText = cartItemCount;
+
+      if (shippingStatus && progressFill) {
+        if (cartSubtotalValue >= 65) {
+          shippingStatus.innerText = 'Complimentary Bespoke Delivery Unlocked!';
+          progressFill.style.width = '100%';
+        } else {
+          const diff = (65 - cartSubtotalValue).toFixed(2);
+          shippingStatus.innerText = `You are $${diff} away from Complimentary Shipping!`;
+          const pct = Math.min(100, Math.max(0, (cartSubtotalValue / 65) * 100));
+          progressFill.style.width = pct + '%';
+        }
+      }
+    }
+
+    // Connect Shell bag button to open cart drawer
+    document.addEventListener('DOMContentLoaded', () => {
+      const shellBagBtn = document.querySelector('button[aria-label="Cart"]');
+      if (shellBagBtn) {
+        shellBagBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openCartDrawer();
+        });
+      }
+    });
+
+    // Shade Selection in Product Cards
+    function setCardShade(cardNum, shadeName, hexCode, buttonEl) {
+      const nameEl = document.getElementById(`card${cardNum}-shade-name`);
+      if (nameEl) nameEl.innerText = shadeName;
+
+      // Update ring state on buttons
+      const container = buttonEl.parentElement;
+      const allBtns = container.querySelectorAll('button');
+      allBtns.forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-secondary', 'ring-offset-1', 'scale-110');
+      });
+      buttonEl.classList.add('ring-2', 'ring-secondary', 'ring-offset-1', 'scale-110');
+    }
+
+    // Wishlist Toggle
+    function toggleWishlist(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        if (icon.style.fontVariationSettings.includes("'FILL' 1")) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-error');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.add('text-error');
+        }
+      }
+    }
+
+    // Interactive Skin Tone Finder Bar
+    let currentDepth = 'Medium';
+    let currentUndertone = 'Warm';
+
+    function setToneDepth(toneName, btn) {
+      currentDepth = toneName;
+      document.getElementById('selected-tone-label').innerText = 'Current: ' + toneName;
+      
+      const allToneBtns = document.querySelectorAll('.tone-btn');
+      allToneBtns.forEach(b => {
+        b.className = 'tone-btn flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left';
+        const title = b.querySelector('p:first-child');
+        const sub = b.querySelector('p:last-child');
+        if (title) title.className = 'font-title-md text-title-md text-on-surface';
+        if (sub) sub.className = 'font-body-sm text-body-sm text-on-surface-variant';
+      });
+
+      btn.className = 'tone-btn active-tone flex items-center gap-space-sm p-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface transition-all text-left shadow-sm';
+      const activeTitle = btn.querySelector('p:first-child');
+      const activeSub = btn.querySelector('p:last-child');
+      if (activeTitle) activeTitle.className = 'font-title-md text-title-md text-inverse-on-surface';
+      if (activeSub) activeSub.className = 'font-body-sm text-body-sm text-surface-container-high';
+
+      updateMatchSummary();
+    }
+
+    function setUndertone(undertoneFull, btn) {
+      currentUndertone = undertoneFull.split(' ')[0];
+      document.getElementById('selected-undertone-label').innerText = 'Current: ' + undertoneFull;
+
+      const allUnderBtns = document.querySelectorAll('.undertone-btn');
+      allUnderBtns.forEach(b => {
+        b.className = 'undertone-btn flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all text-left';
+        const title = b.querySelector('p:first-child');
+        const sub = b.querySelector('p:last-child');
+        const icon = b.querySelector('.material-symbols-outlined');
+        if (title) title.className = 'font-title-md text-title-md text-on-surface';
+        if (sub) sub.className = 'font-body-sm text-body-sm text-on-surface-variant';
+        if (icon) icon.classList.add('opacity-0');
+      });
+
+      btn.className = 'undertone-btn active-undertone flex items-center justify-between p-space-md rounded-lg bg-inverse-surface text-inverse-on-surface transition-all text-left';
+      const activeTitle = btn.querySelector('p:first-child');
+      const activeSub = btn.querySelector('p:last-child');
+      const activeIcon = btn.querySelector('.material-symbols-outlined');
+      if (activeTitle) activeTitle.className = 'font-title-md text-title-md text-inverse-on-surface';
+      if (activeSub) activeSub.className = 'font-body-sm text-body-sm text-surface-container-high';
+      if (activeIcon) {
+        activeIcon.classList.remove('opacity-0');
+        activeIcon.classList.add('text-secondary-fixed');
+      }
+
+      updateMatchSummary();
+    }
+
+    function updateMatchSummary() {
+      const summary = document.getElementById('match-summary');
+      if (summary) {
+        summary.innerText = `${currentDepth} • ${currentUndertone} Selected (Showing 6 Matching Shades)`;
+      }
+    }
+
+    function filterCatalogByShade() {
+      const bestSellersSection = document.getElementById('best-sellers');
+      if (bestSellersSection) {
+        bestSellersSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Interactive Drag Before/After AR Slider
+    const arContainer = document.getElementById('ar-slider-container');
+    const arClipLayer = document.getElementById('ar-clip-layer');
+    const arHandle = document.getElementById('ar-handle');
+    let isDragging = false;
+
+    if (arContainer && arClipLayer && arHandle) {
+      const updateSliderPos = (clientX) => {
+        const rect = arContainer.getBoundingClientRect();
+        let posX = clientX - rect.left;
+        posX = Math.max(0, Math.min(posX, rect.width));
+        const percentage = (posX / rect.width) * 100;
+        arClipLayer.style.width = percentage + '%';
+        arHandle.style.left = percentage + '%';
+      };
+
+      arContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        updateSliderPos(e.clientX);
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        updateSliderPos(e.clientX);
+      });
+
+      // Touch screen support
+      arContainer.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        updateSliderPos(e.touches[0].clientX);
+      });
+      window.addEventListener('touchend', () => { isDragging = false; });
+      window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        updateSliderPos(e.touches[0].clientX);
+      });
+    }
+
+    function triggerArTryOnModal() {
+      alert('Virtual Shade Calibration: Align your face within natural lighting. AR Camera initialization will begin in 3 seconds.');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-4px_24px_rgba(37,25,21,0.02)] pt-space-xl pb-space-lg"><div class="w-full px-margin-sm md:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter pb-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="space-y-space-xs"><span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Inner Circle Privilege</span><h3 class="font-headline-sm text-headline-sm text-on-surface">Join the Inner Circle</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Receive 15% off your first acquisition, exclusive early access to sensorial launches, and bespoke shade consultations.</p></div><form class="flex items-center max-w-md gap-space-xs pt-space-xs"><input class="w-full h-12 px-space-md bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md rounded-xl outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Enter your email address" type="email"/><button class="h-12 px-space-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-label-md text-label-md tracking-wider uppercase rounded-xl transition-colors whitespace-nowrap" type="button">Subscribe</button></form></div><div class="space-y-space-md"><h4 class="font-title-md text-title-md text-on-surface">Collections</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="face-and-base" href="#">Face &amp; Skin Base</a></li><li><a class="hover:text-on-surface transition-colors" data-path="lips" href="#">Lip Lacquers &amp; Balms</a></li><li><a class="hover:text-on-surface transition-colors" data-path="eyes" href="#">Eye Velvet Shadows</a></li><li><a class="hover:text-on-surface transition-colors" data-path="shade-matcher" href="#">Complexion Matching</a></li><li><a class="hover:text-on-surface transition-colors" data-path="shop-all" href="#">Archival Discovery Set</a></li></ul></div><div class="space-y-space-md"><h4 class="font-title-md text-title-md text-on-surface">Concierge</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="client-care" href="#">Client Care &amp; Inquiries</a></li><li><a class="hover:text-on-surface transition-colors" data-path="shipping-and-returns" href="#">Bespoke Delivery &amp; Returns</a></li><li><a class="hover:text-on-surface transition-colors" data-path="shade-match-quiz" href="#">Virtual Skin Consultation</a></li><li><a class="hover:text-on-surface transition-colors" data-path="boutiques" href="#">Atelier Locations</a></li><li><a class="hover:text-on-surface transition-colors" data-path="faq" href="#">Frequently Addressed</a></li></ul></div><div class="space-y-space-md"><h4 class="font-title-md text-title-md text-on-surface">The House</h4><ul class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="about" href="#">Our Botanical Heritage</a></li><li><a class="hover:text-on-surface transition-colors" data-path="sustainability" href="#">100% Vegan &amp; Leaping Bunny</a></li><li><a class="hover:text-on-surface transition-colors" data-path="sustainability" href="#">Refillable Glass Architecture</a></li><li><a class="hover:text-on-surface transition-colors" data-path="inner-circle" href="#">VIP Circle Rewards</a></li><li><a class="hover:text-on-surface transition-colors" data-path="careers" href="#">Careers at Aurélia</a></li></ul></div></div><div class="w-full h-px bg-surface-container-high my-space-lg"></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-md pt-space-sm"><div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><span>© 2025 AURÉLIA Maison de Beauté. All rights reserved.</span><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Notice</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-[16px] text-secondary">public</span><span>United States (USD $)</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div><div class="flex items-center gap-space-sm text-on-surface-variant"><a aria-label="Instagram" class="p-space-xs hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Editorial Videos" class="p-space-xs hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a><a aria-label="Brand Journal" class="p-space-xs hover:text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span></a></div></div></div></div></footer></body></html>

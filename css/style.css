@@ -1,0 +1,134 @@
+/* AURÉLIA Maison de Beauté - Shared Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --color-primary: #7c5547;
+  --color-primary-container: #d4a392;
+  --color-secondary: #745b26;
+  --color-secondary-container: #ffdb9a;
+  --color-surface: #fff8f6;
+  --color-surface-dim: #edd5ce;
+  --color-surface-low: #fff1ed;
+  --color-surface-high: #fbe3dc;
+  --color-surface-highest: #f5ddd7;
+  --color-on-surface: #251915;
+  --color-on-surface-variant: #514440;
+  --color-inverse-surface: #3b2d29;
+  --color-inverse-on-surface: #ffede8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff8f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5c3bd;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c5547;
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Toast Container */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #251915;
+  color: #ffede8;
+  box-shadow: 0 10px 30px rgba(37, 25, 21, 0.25);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  animation: toastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s ease;
+  max-width: 380px;
+}
+
+.toast.toast-success {
+  border-left: 4px solid #745b26;
+}
+
+.toast.toast-error {
+  border-left: 4px solid #ba1a1a;
+}
+
+.toast.toast-info {
+  border-left: 4px solid #7c5547;
+}
+
+.toast.fade-out {
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-loading {
+  background: linear-gradient(90deg, #f5ddd7 25%, #fff1ed 50%, #f5ddd7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Glassmorphism utility */
+.glass-effect {
+  background: rgba(255, 248, 246, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
